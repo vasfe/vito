@@ -20,7 +20,7 @@ const SwiperComponent = ({ slides }: SwiperComponentProps) => {
       {slides.map((slide) => (
         <SwiperSlide key={slide.title}>
           <h3>{slide.title}</h3>
-          <p>{slide.description}</p>
+          <p>{slide.descripti3on}</p>
         </SwiperSlide>
       ))}
     </Swiper>
