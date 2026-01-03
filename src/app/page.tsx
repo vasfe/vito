@@ -14,6 +14,7 @@ export default function Home() {
       <section id="home" className="hero-section">
         <div className="container hero-content">
           <h1 className="display-1">{heroData.title}</h1>
+          <h2 className="display-5">{heroData.subheader}</h2>
           <p className="lead">{heroData.paragraph}</p>
           <div className="social-icons mt-4">
             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
