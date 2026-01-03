@@ -66,12 +66,15 @@
 .navbar-toggler,
 .navbar-toggler:focus,
 .navbar-toggler:active,
-.navbar-toggler-icon:focus,
-.navbar-toggler-icon:active,
 .navbar-toggler.collapsed {
-    outline: none;
-    box-shadow: none;
-    border: none;
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.navbar-toggler-icon {
+    outline: none !important;
+    border: none !important;
 }
 
 .swiper-pagination {

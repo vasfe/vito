@@ -1,12 +1,13 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import Image from 'next/image';
 
 const CustomNavbar = () => {
   const [activeLink, setActiveLink] = useState('home');
   const [expanded, setExpanded] = useState(false);
+  const navbarRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,6 +33,22 @@ const CustomNavbar = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (navbarRef.current && !navbarRef.current.contains(event.target as Node)) {
+        setExpanded(false);
+      }
+    };
+
+    if (expanded) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [expanded]);
+
   const navClasses = `navbar navbar-expand-lg navbar-light bg-light`;
 
   return (
@@ -43,6 +60,7 @@ const CustomNavbar = () => {
       className={navClasses}
       expanded={expanded}
       onToggle={() => setExpanded(!expanded)}
+      ref={navbarRef}
     >
       <div className="container">
         <Navbar.Brand href="#home" onClick={() => setExpanded(false)}>
