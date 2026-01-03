@@ -93,3 +93,10 @@
   font-size: 0.8rem !important;
   border-radius: 0;
 }
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto;
+    padding: 100px 0;
+  }
+}
