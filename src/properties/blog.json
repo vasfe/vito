@@ -1,0 +1,20 @@
+{
+  "title": "Blog",
+  "posts": [
+    {
+      "image": "/globe.svg",
+      "title": "Blog Post Title 1",
+      "description": "This is a short description of the first blog post. It gives a brief overview of the content."
+    },
+    {
+      "image": "/globe.svg",
+      "title": "Blog Post Title 2",
+      "description": "This is a short description of the second blog post. Discover more about this topic."
+    },
+    {
+      "image": "/globe.svg",
+      "title": "Blog Post Title 3",
+      "description": "This is a short description of the third blog post. Read on for interesting insights."
+    }
+  ]
+}
