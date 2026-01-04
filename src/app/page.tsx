@@ -1,11 +1,11 @@
-import SwiperComponent from '@/components/SwiperComponent';
-import ContactForm from '@/components/ContactForm';
-import heroData from '@/properties/hero.json';
-import suDiMeData from '@/properties/su-di-me.json';
-import serviziData from '@/properties/servizi.json';
-import faqData from '@/properties/faq.json';
-import blogData from '@/properties/blog.json';
-import prenotaData from '@/properties/prenota.json';
+import SwiperComponent from "@/components/SwiperComponent";
+import ContactForm from "@/components/ContactForm";
+import heroData from "@/properties/hero.json";
+import suDiMeData from "@/properties/su-di-me.json";
+import serviziData from "@/properties/servizi.json";
+import faqData from "@/properties/faq.json";
+import blogData from "@/properties/blog.json";
+import prenotaData from "@/properties/prenota.json";
 
 export default function Home() {
   return (
@@ -19,13 +19,28 @@ export default function Home() {
           <h2 className="display-5">{heroData.subheader}</h2>
           <p className="lead">{heroData.paragraph}</p>
           <div className="social-icons mt-4">
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
               <i className="bi bi-facebook"></i>
             </a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
               <i className="bi bi-instagram"></i>
             </a>
-            <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <a
+              href="https://wa.me/1234567890"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+            >
               <i className="bi bi-whatsapp"></i>
             </a>
           </div>
@@ -37,7 +52,11 @@ export default function Home() {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6">
-              <img src="https://via.placeholder.com/500" alt="Su Di Me Image" className="img-fluid rounded-circle" />
+              <img
+                src="https://via.placeholder.com/500"
+                alt="Su Di Me Image"
+                className="img-fluid rounded-circle"
+              />
             </div>
             <div className="col-lg-6">
               <div className="su-di-me-content">
@@ -53,8 +72,12 @@ export default function Home() {
       {/* Servizi Section */}
       <section id="servizi" className="py-5">
         <div className="container">
-          <h2 className="section-header text-center mb-5">{serviziData.title}</h2>
-          <h3 className="section-subheader text-center mb-4">{serviziData.subheader}</h3>
+          <h2 className="section-header text-center mb-5">
+            {serviziData.title}
+          </h2>
+          <h3 className="section-subheader text-center mb-4">
+            {serviziData.subheader}
+          </h3>
           <p className="servizi-paragraph">{serviziData.paragraph}</p>
           <SwiperComponent slides={serviziData.slides} />
         </div>
@@ -70,26 +93,26 @@ export default function Home() {
                 {faqData.questions.map((q, index) => (
                   <div className="accordion-item" key={q.question}>
                     <h2 className="accordion-header" id={`heading${index}`}>
-                      <button 
-                        className="accordion-button" 
-                        type="button" 
-                        data-bs-toggle="collapse" 
-                        data-bs-target={`#collapse${index}`} 
-                        aria-expanded={index === 0 ? 'true' : 'false'} 
+                      <button
+                        className="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target={`#collapse${index}`}
+                        aria-expanded={index === 0 ? "true" : "false"}
                         aria-controls={`collapse${index}`}
                       >
                         {q.question}
                       </button>
                     </h2>
-                    <div 
-                      id={`collapse${index}`} 
-                      className={`accordion-collapse collapse ${index === 0 ? 'show' : ''}`} 
-                      aria-labelledby={`heading${index}`} 
+                    <div
+                      id={`collapse${index}`}
+                      className={`accordion-collapse collapse ${
+                        index === 0 ? "show" : ""
+                      }`}
+                      aria-labelledby={`heading${index}`}
                       data-bs-parent="#faqAccordion"
                     >
-                      <div className="accordion-body">
-                        {q.answer}
-                      </div>
+                      <div className="accordion-body">{q.answer}</div>
                     </div>
                   </div>
                 ))}
@@ -107,7 +130,11 @@ export default function Home() {
             {blogData.posts.map((post, index) => (
               <div className="col-md-4 mb-4" key={post.title}>
                 <a href="#" className="card h-100">
-                  <img src={post.image} className="card-img-top" alt={post.title} />
+                  <img
+                    src={post.image}
+                    className="card-img-top"
+                    alt={post.title}
+                  />
                   <div className="card-body">
                     <h5 className="card-title">{post.title}</h5>
                     <p className="card-text">{post.description}</p>
@@ -122,11 +149,20 @@ export default function Home() {
       {/* Prenota Section */}
       <section id="prenota" className="py-5 bg-light">
         <div className="container">
-          <h2 className="section-header text-center mb-5">{prenotaData.title}</h2>
+          <h2 className="section-header text-center mb-5">
+            {prenotaData.title}
+          </h2>
           <div className="row">
             <div className="col-lg-6">
-              <div>
-                <p>{prenotaData.address}</p>
+              <div className="address-container">
+                <div className="address-label">Ricevo a</div>
+                <ul>
+                  {prenotaData.addresses.map((address) => (
+                    <li key={address}>{address}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="mt-4">
                 <p>{prenotaData.phone}</p>
                 <p>{prenotaData.email}</p>
               </div>
