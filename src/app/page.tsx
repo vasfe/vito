@@ -53,7 +53,7 @@ export default function Home() {
           <div className="row align-items-center">
             <div className="col-lg-6">
               <img
-                src="https://via.placeholder.com/500"
+                src={suDiMeData.image}
                 alt="Su Di Me Image"
                 className="img-fluid rounded-circle"
               />
