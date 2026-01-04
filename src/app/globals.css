@@ -73,6 +73,17 @@
   font-weight: 700;
 }
 
+.section-subheader {
+  font-size: 1.7rem;
+}
+
+.servizi-paragraph {
+  font-size: 1.3rem;
+  margin: 0 auto 30px auto;
+  color: #555;
+}
+
+
 .nav-link.active {
   color: #b8a07e !important;
 }

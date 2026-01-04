@@ -54,6 +54,8 @@ export default function Home() {
       <section id="servizi" className="py-5">
         <div className="container">
           <h2 className="section-header text-center mb-5">{serviziData.title}</h2>
+          <h3 className="section-subheader text-center mb-4">{serviziData.subheader}</h3>
+          <p className="servizi-paragraph">{serviziData.paragraph}</p>
           <SwiperComponent slides={serviziData.slides} />
         </div>
       </section>
