@@ -24,11 +24,7 @@ const SwiperComponent = ({ slides }: SwiperComponentProps) => {
         768: {
           slidesPerView: 3,
           spaceBetween: 30,
-        },
-        992: {
-          slidesPerView: 4,
-          spaceBetween: 40,
-        },
+        }
       }}
     >
       {slides.map((slide) => (

@@ -21,6 +21,10 @@
   background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
 }
 
+.hero-section h2 {
+  font-size: 2.5rem; /* Default font size for subheader */
+}
+
 .hero-content {
   position: relative; /* Ensure content is above the overlay */
   z-index: 1;
@@ -85,6 +89,10 @@
   padding-bottom: 40px; /* Space for pagination */
 }
 
+.swiper-slide h3 {
+  font-size: 1.2rem; /* Smaller font size for service titles */
+}
+
 .swiper-pagination-bullets {
   bottom: 0px !important; /* Position pagination at the bottom */
 }
@@ -101,5 +109,8 @@
   .hero-section {
     height: auto;
     padding: 100px 0;
+  }
+  .hero-section h2 {
+    font-size: 1.5rem; /* Smaller font size for subheader on mobile */
   }
 }
