@@ -50,12 +50,12 @@ export default function Home() {
       {/* Su Di Me Section */}
       <section id="su-di-me" className="py-5 bg-light">
         <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-6">
+          <div className="row align-items-center g-3">
+            <div className="col-lg-6 image-column">
               <img
                 src={suDiMeData.image}
                 alt="Su Di Me Image"
-                className="img-fluid rounded-circle"
+                className="img-fluid rounded su-di-me-image"
               />
             </div>
             <div className="col-lg-6">
