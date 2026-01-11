@@ -6,6 +6,7 @@ import serviziData from "@/properties/servizi.json";
 import faqData from "@/properties/faq.json";
 import blogData from "@/properties/blog.json";
 import prenotaData from "@/properties/prenota.json";
+import { getAssetPath } from "@/utils/asset";
 
 export default function Home() {
   return (
@@ -53,7 +54,7 @@ export default function Home() {
           <div className="row align-items-center g-3">
             <div className="col-lg-6 image-column">
               <img
-                src={suDiMeData.image}
+                src={getAssetPath(suDiMeData.image)}
                 alt="Su Di Me Image"
                 className="img-fluid rounded su-di-me-image"
               />
@@ -131,7 +132,7 @@ export default function Home() {
               <div className="col-md-4 mb-4" key={post.title}>
                 <a href="#" className="card h-100">
                   <img
-                    src={post.image}
+                    src={getAssetPath(post.image)}
                     className="card-img-top"
                     alt={post.title}
                   />
