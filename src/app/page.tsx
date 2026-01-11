@@ -9,10 +9,14 @@ import prenotaData from "@/properties/prenota.json";
 import { getAssetPath } from "@/utils/asset";
 
 export default function Home() {
+  const heroStyle = {
+    backgroundImage: `url('${getAssetPath(heroData.image)}')`,
+  };
+
   return (
     <main>
       {/* Hero Section */}
-      <section id="home" className="hero-section">
+      <section id="home" className="hero-section" style={heroStyle}>
         <div className="container hero-content">
           <h1 className="display-1">
             <span className="dott-prefix">Dott.</span> Vito Ferraro

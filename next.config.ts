@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const isProd = process.env.NODE_ENV === 'production';
+const assetPrefix = isProd ? '/vito' : '';
 
 const nextConfig: NextConfig = {
   output: "export",
@@ -8,11 +9,8 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   reactCompiler: true,
-  basePath: isProd ? '/vito' : '',
-  assetPrefix: isProd ? '/vito' : '',
-  env: {
-    ASSET_PREFIX: isProd ? '/vito' : '',
-  },
+  basePath: assetPrefix,
+  assetPrefix: assetPrefix
 };
 
 export default nextConfig;
