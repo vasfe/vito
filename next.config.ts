@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
   },
   reactCompiler: true,
   basePath: '/vito',
+  assetPrefix: '/vito/',
 };
 
 export default nextConfig;
