@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   reactCompiler: true,
+  basePath: '/vito',
 };
 
 export default nextConfig;
