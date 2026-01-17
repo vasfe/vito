@@ -7,6 +7,14 @@ import faqData from "@/properties/faq.json";
 import blogData from "@/properties/blog.json";
 import prenotaData from "@/properties/prenota.json";
 import { getAssetPath } from "@/utils/asset";
+import type { Metadata } from "next";
+import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Home",
+  description:
+    "Pagina principale dello studio psicologico del Dott. Vito Ferraro. Scopri i servizi offerti e prenota una consulenza.",
+};
 
 export default function Home() {
   const heroStyle = {
@@ -57,11 +65,16 @@ export default function Home() {
         <div className="container">
           <div className="row align-items-center g-3">
             <div className="col-lg-6 image-column">
-              <img
-                src={getAssetPath(suDiMeData.image)}
-                alt="Su Di Me Image"
-                className="img-fluid rounded su-di-me-image"
-              />
+              <div className="su-di-me-image-wrapper">
+                <Image
+                  src={getAssetPath(suDiMeData.image)}
+                  alt="Fotografia del Dott. Vito Ferraro - Psicologo"
+                  className="rounded"
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  priority
+                />
+              </div>
             </div>
             <div className="col-lg-6">
               <div className="su-di-me-content">
@@ -135,10 +148,12 @@ export default function Home() {
             {blogData.posts.map((post, index) => (
               <div className="col-md-4 mb-4" key={post.title}>
                 <a href="#" className="card h-100">
-                  <img
+                  <Image
                     src={getAssetPath(post.image)}
                     className="card-img-top"
                     alt={post.title}
+                    width={400}
+                    height={300}
                   />
                   <div className="card-body">
                     <h5 className="card-title">{post.title}</h5>
@@ -178,6 +193,31 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Psychologist",
+          "name": "Dott. Vito Ferraro",
+          "image": "https://www.vitoferraro.com/hero.jpeg",
+          "@id": "https://www.vitoferraro.com",
+          "url": "https://www.vitoferraro.com",
+          "telephone": "+39 3295813245",
+          "email": "ferrarovpsicologo@gmail.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Via Labicana 92 - sc. A/int. 3",
+            "addressLocality": "Roma",
+            "postalCode": "00184",
+            "addressRegion": "RM",
+            "addressCountry": "IT"
+          },
+          "sameAs": [
+            "https://www.facebook.com",
+            "https://www.instagram.com"
+          ]
+        }) }}
+      />
     </main>
   );
 }

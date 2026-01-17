@@ -132,8 +132,12 @@
   border-radius: 0;
 }
 
-.su-di-me-image {
-  max-width: 400px !important;
+.su-di-me-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  aspect-ratio: 600 / 800; /* Use the original dimensions for aspect ratio */
+  margin: 0 auto;
 }
 
 .image-column {

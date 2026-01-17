@@ -9,6 +9,7 @@ export async function POST(req: NextRequest) {
   const msg = {
     to: process.env.TO_EMAIL_ADDRESS as string,
     from: process.env.FROM_EMAIL_ADDRESS as string,
+    replyTo: email,
     subject: `New message from ${name}`,
     text: message,
     html: `<strong>From:</strong> ${name}<br /><strong>Email:</strong> ${email}<br /><strong>Message:</strong><br />${message}`,

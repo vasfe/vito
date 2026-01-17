@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -10,6 +11,16 @@ interface SwiperComponentProps {
 }
 
 const SwiperComponent = ({ slides }: SwiperComponentProps) => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null; // Or a loading skeleton
+  }
+
   return (
     <Swiper
       modules={[Pagination]}
@@ -24,7 +35,7 @@ const SwiperComponent = ({ slides }: SwiperComponentProps) => {
         768: {
           slidesPerView: 3,
           spaceBetween: 30,
-        }
+        },
       }}
     >
       {slides.map((slide) => (
