@@ -2,15 +2,19 @@
   "title": "FAQ",
   "questions": [
     {
-      "question": "Domanda Frequente 1",
-      "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    "question": "Come faccio a prenotare un appuntamento?",
+      "answer": "Tutte le prestazioni possono essere prenotate telefonicamente o via WhatsApp al numero +39 3295813245, via mail scrivendo all’indirizzo ferrarovpsicologo@gmail.com o usando il servizio mail di questo sito in fondo alla pagina. Per qualsiasi chiarimento o per individuare la soluzione più adatta, è possibile contattarmi senza impegno: sarò felice di rispondere e valutare insieme il percorso più appropriato."
     },
     {
-      "question": "Domanda Frequente 2",
-      "answer": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "question": "Qual è il costo delle prestazioni?",
+      "answer": "Il costo delle prestazioni varia in base alla modalità di erogazione e al numero di partecipanti, così da poter rispondere nel modo più adeguato alle diverse esigenze. Le sedute online prevedono una tariffa di 40 euro per gli incontri individuali e di 60 euro per le coppie. Le sedute in studio hanno un costo di 70 euro per la singola persona e di 100 euro per la coppia. Per quanto riguarda gli interventi domiciliari, le tariffe vengono concordate insieme in modo personalizzato, considerando il tipo di intervento, l’ubicazione, e l’eventuale utilizzo di materiali specifici necessari. Per qualsiasi chiarimento o per individuare la soluzione più adatta, è possibile contattarmi senza impegno: sarò felice di rispondere e valutare insieme il percorso più appropriato."
     },
     {
       "question": "Domanda Frequente 3",
+      "answer": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+    },
+    {
+      "question": "Domanda Frequente 4",
       "answer": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
     }
   ]
