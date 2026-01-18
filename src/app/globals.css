@@ -1,3 +1,16 @@
+body {
+  --bs-body-color: #333;
+  --accent-color: #b8a07e;
+}
+
+.border-accent {
+  border-color: var(--accent-color) !important;
+}
+
+.su-di-me-image-wrapper.border-5 {
+  border-width: 10px !important;
+}
+
 .hero-section {
   position: relative;
   height: 100vh;
@@ -12,8 +25,7 @@
 }
 
 .hero-section h1 {
-  font-family: var(--font-lato);
-  font-weight: 600; /* Semi-bold */
+  font-weight: 700;
 }
 
 .dott-prefix {
@@ -27,28 +39,27 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .hero-section h2 {
-  font-size: 1.5rem; /* Default font size for subheader */
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .hero-content {
-  position: relative; /* Ensure content is above the overlay */
+  position: relative;
   z-index: 1;
 }
 
 .social-icons a {
   font-size: 1.5rem;
-  margin: 0 0.5rem;
   color: white;
   transition: color 0.3s;
 }
 
 .social-icons a:hover {
-  color: #adb5bd; /* A light grey color for hover */
+  color: #adb5bd;
 }
 
 /* Styles for showing/hiding the navbar */
@@ -56,36 +67,19 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1030; /* Ensure navbar is above other content */
-  transition: transform 0.3s ease-in-out; /* Transition for transform */
+  z-index: 1030;
+  transition: transform 0.3s ease-in-out;
 }
 
 .navbar-nav .nav-link {
-  margin-inline: .7rem; /* Increased spacing */
-  font-weight: 600; /* Heavier font */
-  padding: 8px;
-  color: rgb(126, 125, 125); /* New font color */
-}
-
-.section-header {
-  font-size: 2rem; /* Smaller font size */
-  text-transform: uppercase;
+  margin-inline: .75rem;
   font-weight: 700;
+  padding: 0.5rem;
+  color: rgb(126, 125, 125);
 }
-
-.section-subheader {
-  font-size: 1.7rem;
-}
-
-.servizi-paragraph {
-  font-size: 1.3rem;
-  margin: 0 auto 30px auto;
-  color: #555;
-}
-
 
 .nav-link.active {
-  color: #b8a07e !important;
+  color: var(--accent-color) !important;
 }
 
 .navbar-toggler,
@@ -99,19 +93,19 @@
 }
 
 .swiper-pagination {
-  margin-top: 10px; /* Adjust as needed */
+  margin-top: 10px;
 }
 
 .swiper-slide {
-  padding-bottom: 40px; /* Space for pagination */
+  padding-bottom: 2.5rem;
 }
 
 .swiper-slide h3 {
-  font-size: 1.2rem; /* Smaller font size for service titles */
+  font-size: 1.25rem;
 }
 
 .swiper-pagination-bullets {
-  bottom: 0px !important; /* Position pagination at the bottom */
+  bottom: 0px !important;
 }
 
 .address-container {
@@ -120,7 +114,6 @@
 }
 
 .address-label {
-  margin-right: 1rem;
   font-weight: bold;
 }
 
@@ -135,14 +128,13 @@
 .su-di-me-image-wrapper {
   position: relative;
   width: 100%;
-  max-width: 350px;
-  aspect-ratio: 600 / 800; /* Use the original dimensions for aspect ratio */
+  max-width: 300px;
+  aspect-ratio: 600 / 800;
   margin: 0 auto;
 }
 
 .image-column {
   text-align: center;
-  margin-bottom: 1.5rem;
 }
 
 @media (max-width: 768px) {
@@ -151,6 +143,33 @@
     padding: 100px 0;
   }
   .hero-section h2 {
-    font-size: 1.5rem; /* Smaller font size for subheader on mobile */
+    font-size: 1.5rem;
   }
+}
+
+/* Custom Accordion Styling */
+.accordion-item {
+  background-color: white;
+  border-radius: 0 !important;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid var(--bs-accordion-border-color);
+}
+.accordion-item:first-of-type {
+  border-top: none;
+}
+.accordion-header {
+  background-color: white;
+  border-bottom: none;
+}
+.accordion-button,
+.accordion-button:focus,
+.accordion-button:not(.collapsed) {
+  background-color: white !important;
+  box-shadow: none !important;
+  border: none;
+}
+.accordion-button:not(.collapsed) {
+  color: var(--accent-color);
 }

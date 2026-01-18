@@ -37,6 +37,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
+              className="mx-2"
             >
               <i className="bi bi-facebook"></i>
             </a>
@@ -45,6 +46,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
+              className="mx-2"
             >
               <i className="bi bi-instagram"></i>
             </a>
@@ -53,6 +55,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp"
+              className="mx-2"
             >
               <i className="bi bi-whatsapp"></i>
             </a>
@@ -64,12 +67,11 @@ export default function Home() {
       <section id="su-di-me" className="py-5 bg-light">
         <div className="container">
           <div className="row align-items-center g-3">
-            <div className="col-lg-6 image-column">
-              <div className="su-di-me-image-wrapper">
+            <div className="col-lg-6 image-column mb-4">
+              <div className="su-di-me-image-wrapper border border-5 border-accent shadow rounded">
                 <Image
                   src={getAssetPath(suDiMeData.image)}
                   alt="Fotografia del Dott. Vito Ferraro - Psicologo"
-                  className="rounded"
                   fill
                   style={{ objectFit: 'cover' }}
                   priority
@@ -78,7 +80,7 @@ export default function Home() {
             </div>
             <div className="col-lg-6">
               <div className="su-di-me-content">
-                <h2 className="section-header">{suDiMeData.title}</h2>
+                <h2 className="fs-2 text-uppercase fw-bold">{suDiMeData.title}</h2>
                 <p className="lead">{suDiMeData.lead}</p>
                 <p>{suDiMeData.paragraph}</p>
               </div>
@@ -90,29 +92,64 @@ export default function Home() {
       {/* Servizi Section */}
       <section id="servizi" className="py-5">
         <div className="container">
-          <h2 className="section-header text-center mb-5">
+          <h2 className="fs-2 text-uppercase fw-bold text-center mb-5">
             {serviziData.title}
           </h2>
-          <h3 className="section-subheader text-center mb-4">
+          <h3 className="fs-4 text-center mb-4">
             {serviziData.subheader}
           </h3>
-          <p className="servizi-paragraph">{serviziData.paragraph}</p>
+          <p className="lead">{serviziData.paragraph}</p>
           <SwiperComponent slides={serviziData.slides} />
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section id="faq" className="py-5 bg-light">
+      {/* Prenota Section */}
+      <section id="prenota" className="py-5 bg-light">
         <div className="container">
-          <h2 className="section-header text-center mb-5">{faqData.title}</h2>
+          <h2 className="fs-2 text-uppercase fw-bold text-center mb-5">
+            {prenotaData.title}
+          </h2>
+          <div className="row">
+            <div className="col-lg-6">
+              <div className="address-container">
+                <div className="address-label me-3">Ricevo a</div>
+                <ul>
+                  {prenotaData.addresses.map((address) => (
+                    <li key={address}>{address}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="mt-4">
+                <p>{prenotaData.phone}</p>
+                <p>{prenotaData.email}</p>
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <ContactForm />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section id="faq" className="py-5">
+        <div className="container">
+          <h2 className="fs-2 text-uppercase fw-bold text-center mb-5">{faqData.title}</h2>
           <div className="row">
             <div className="col-lg-12 mx-auto">
               <div className="accordion" id="faqAccordion">
                 {faqData.questions.map((q, index) => (
                   <div className="accordion-item" key={q.question}>
-                    <h2 className="accordion-header" id={`heading${index}`}>
+                    <div
+                      className="accordion-header"
+                      id={`heading${index}`}
+                      role="heading"
+                      aria-level={2}
+                    >
                       <button
-                        className="accordion-button"
+                        className={`accordion-button ${
+                          index === 0 ? "" : "collapsed"
+                        }`}
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target={`#collapse${index}`}
@@ -121,7 +158,7 @@ export default function Home() {
                       >
                         {q.question}
                       </button>
-                    </h2>
+                    </div>
                     <div
                       id={`collapse${index}`}
                       className={`accordion-collapse collapse ${
@@ -141,9 +178,9 @@ export default function Home() {
       </section>
 
       {/* Blog Section */}
-      <section id="blog" className="py-5">
+      <section id="blog" className="py-5 bg-light">
         <div className="container">
-          <h2 className="section-header text-center mb-5">{blogData.title}</h2>
+          <h2 className="fs-2 text-uppercase fw-bold text-center mb-5">{blogData.title}</h2>
           <div className="row">
             {blogData.posts.map((post, index) => (
               <div className="col-md-4 mb-4" key={post.title}>
@@ -156,40 +193,12 @@ export default function Home() {
                     height={300}
                   />
                   <div className="card-body">
-                    <h5 className="card-title">{post.title}</h5>
+                    <h3 className="card-title fs-5">{post.title}</h3>
                     <p className="card-text">{post.description}</p>
                   </div>
                 </a>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Prenota Section */}
-      <section id="prenota" className="py-5 bg-light">
-        <div className="container">
-          <h2 className="section-header text-center mb-5">
-            {prenotaData.title}
-          </h2>
-          <div className="row">
-            <div className="col-lg-6">
-              <div className="address-container">
-                <div className="address-label">Ricevo a</div>
-                <ul>
-                  {prenotaData.addresses.map((address) => (
-                    <li key={address}>{address}</li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-4">
-                <p>{prenotaData.phone}</p>
-                <p>{prenotaData.email}</p>
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <ContactForm />
-            </div>
           </div>
         </div>
       </section>
@@ -199,9 +208,9 @@ export default function Home() {
           "@context": "https://schema.org",
           "@type": "Psychologist",
           "name": "Dott. Vito Ferraro",
-          "image": "https://www.vitoferraro.com/hero.jpeg",
-          "@id": "https://www.vitoferraro.com",
-          "url": "https://www.vitoferraro.com",
+          "image": "https://vitoferraro.com/hero.jpeg",
+          "@id": "https://vitoferraro.com",
+          "url": "https://vitoferraro.com",
           "telephone": "+39 3295813245",
           "email": "ferrarovpsicologo@gmail.com",
           "address": {

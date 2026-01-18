@@ -19,8 +19,8 @@ const Footer = () => {
               <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="text-dark">
                 <i className="bi bi-whatsapp fs-4"></i>
               </a>
-            <p>&copy; {new Date().getFullYear()} Vito Ferraro. All rights reserved.</p>
             </div>
+            <p className="mt-3 fs-6 text-muted">&copy; {new Date().getFullYear()} Vito Ferraro. All rights reserved.</p>
           </Col>
         </Row>
       </Container>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
-import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./globals.css";
 import Navbar from "../components/Navbar"; // Import Navbar
 import BootstrapClient from "../components/BootstrapClient"; // Import BootstrapClient
 import Footer from "../components/Footer"; // Import Footer
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   description:
     "Studio psicologico del Dott. Vito Ferraro. Supporto psicologico e percorsi di crescita personale.",
-  metadataBase: new URL("https://www.vitoferraro.com"), // TODO: Update with actual production URL
+  metadataBase: new URL("https://vitoferraro.com"),
   openGraph: {
     title: "Dott. Vito Ferraro - Psicologo",
     description:
@@ -44,14 +44,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="it">
       <head>
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
         />
       </head>
-      <body className={`${lato.variable} antialiased`}>
+      <body className={`${lato.variable} ${lato.className} antialiased`}>
         <Navbar /> {/* Add Navbar component */}
         {children}
         <BootstrapClient /> {/* Add BootstrapClient component */}

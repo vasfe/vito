@@ -1,26 +1,15 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
 interface SwiperComponentProps {
-  slides: { title: string; descripti3on: string }[];
+  slides: { title: string; description: string }[];
 }
 
 const SwiperComponent = ({ slides }: SwiperComponentProps) => {
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  if (!isMounted) {
-    return null; // Or a loading skeleton
-  }
-
   return (
     <Swiper
       modules={[Pagination]}
@@ -41,7 +30,7 @@ const SwiperComponent = ({ slides }: SwiperComponentProps) => {
       {slides.map((slide) => (
         <SwiperSlide key={slide.title}>
           <h3>{slide.title}</h3>
-          <p>{slide.descripti3on}</p>
+          <p>{slide.description}</p>
         </SwiperSlide>
       ))}
     </Swiper>
