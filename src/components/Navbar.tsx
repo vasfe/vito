@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import Image from 'next/image';
+import { getAssetPath } from '@/utils/asset';
 
 const CustomNavbar = () => {
   const [activeLink, setActiveLink] = useState('home');
@@ -65,7 +66,7 @@ const CustomNavbar = () => {
     >
       <Container>
         <Navbar.Brand href="#home" onClick={() => setExpanded(false)}>
-          <Image src="/logo.png" alt="Vito Logo" width={40} height={40} className="d-inline-block align-top" />
+          <Image src={getAssetPath("/logo.png")} alt="Vito Logo" width={40} height={40} className="d-inline-block align-top" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarNav" />
         <Navbar.Collapse id="navbarNav">
