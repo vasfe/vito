@@ -21,7 +21,7 @@ const FaqSection = () => {
                     aria-level={2}
                   >
                     <button
-                      className={`accordion-button ${
+                      className={`accordion-button fs-5 ${
                         index === 0 ? "" : "collapsed"
                       }`}
                       type="button"
@@ -41,7 +41,7 @@ const FaqSection = () => {
                     aria-labelledby={`heading${index}`}
                     data-bs-parent="#faqAccordion"
                   >
-                    <div className="accordion-body">{q.answer}</div>
+                    <div className="accordion-body ps-4">{q.answer}</div>
                   </div>
                 </div>
               ))}
