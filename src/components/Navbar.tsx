@@ -61,7 +61,7 @@ const CustomNavbar = () => {
       expanded={expanded}
       onToggle={() => setExpanded(!expanded)}
       ref={navbarRef}
-      style={{boxShadow:"0 0 2px"}}
+      style={{boxShadow:"0 2px 25px rgba(0, 0, 0, 0.08)"}}
     >
       <Container>
         <Navbar.Brand href="#home" onClick={() => setExpanded(false)}>
