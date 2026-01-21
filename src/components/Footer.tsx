@@ -9,7 +9,7 @@ const Footer = () => {
       <Container>
         <Row className="justify-content-center">
           <Col md={6} className="text-center">
-            <div className="social-icons mt-3">
+            {/* <div className="social-icons mt-3">
               <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-dark me-3">
                 <i className="bi bi-facebook fs-4"></i>
               </a>
@@ -19,7 +19,7 @@ const Footer = () => {
               <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="text-dark">
                 <i className="bi bi-whatsapp fs-4"></i>
               </a>
-            </div>
+            </div> */}
             <p className="mt-3 fs-6 text-muted">&copy; {new Date().getFullYear()} Vito Ferraro. All rights reserved.</p>
           </Col>
         </Row>
