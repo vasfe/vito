@@ -40,7 +40,7 @@ const ServiziSection = () => {
                 >
                   <Card.Img
                     variant="top"
-                    src={getAssetPath("/globe.svg")}
+                    src={getAssetPath(slide.image)}
                     style={{
                       height: "200px",
                       objectFit: "contain",

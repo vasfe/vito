@@ -5,18 +5,23 @@
   "slides": [
     {
       "title": "Consulenza e sostegno psicologico per adulti, bambini, adolescenti e coppie",
+      "image": "/globe.svg",
       "description": "A chiunque di noi può capitare, nel corso della vita, di attraversare momenti di stress, ansia, tristezza, paura o difficoltà nelle relazioni. Il sostegno psicologico è un aiuto professionale offerto da uno psicologo qualificato a chi sta vivendo una fase di disagio emotivo o mentale. Si fonda sull’ascolto attivo ed empatico e su un approccio accogliente e non giudicante, che valorizza la persona e la sua storia di vita. Gli incontri avvengono in uno spazio sicuro e riservato, tutelato dal segreto professionale, in cui poter esprimere liberamente pensieri, emozioni e vissuti. Lo psicologo accompagna la persona nella comprensione più profonda di ciò che sta vivendo, aiutandola a dare senso alla sofferenza e alla frustrazione, così da poterci lavorare. Insieme si individuano risorse personali e strategie efficaci per affrontare le difficoltà, lavorando su obiettivi concreti e mirati. Il percorso ha come finalità il superamento del problema specifico, nonché il raggiungimento di un maggiore benessere emotivo e una più autentica e profonda consapevolezza di sé."
     },
     {
       "title": "Interventi psico-educativi, anche domiciliari, nell’ambito della disabilità, DSA e BES",
+      "image": "/globe.svg",
       "description": "Vivere una condizione di disabilità — fisica o mentale, congenita o acquisita, lieve o grave — rappresenta sempre una sfida profonda, non solo per la persona direttamente coinvolta, ma anche per il suo nucleo familiare. Spesso ci si trova impreparati, senza strumenti adeguati né conoscenze sufficienti per affrontare la complessità della situazione, mentre i servizi offerti dallo Stato risultano talvolta insufficienti a garantire un supporto concreto e continuativo. In questo contesto, gli interventi psico-educativi rivestono un ruolo fondamentale. Si tratta di percorsi strutturati che integrano aspetti psicologici ed educativi, con l’obiettivo di promuovere il benessere, il funzionamento, l’autonomia e la qualità della vita della persona con disabilità, estendendo i benefici anche al suo contesto familiare. Attraverso questi interventi, la persona viene accompagnata nello sviluppo di nuove abilità, nella comprensione di sé e della propria condizione e nella gestione delle difficoltà emotive, comportamentali e relazionali. Al tempo stesso, si favoriscono dinamiche familiari più serene ed equilibrate, sostenendo un percorso di maggiore autonomia, inclusione e benessere condiviso."
     },
     {
       "title": "Psico-oncologia: sostegno psicologico per chi affronta una malattia oncologica e per chi gli sta accanto",
+      "image": "/globe.svg",
       "description": "Ci sono momenti nella vita in cui eventi improvvisi e dolorosi irrompono nella quotidianità, cambiandola profondamente. La diagnosi di tumore è uno di questi: arriva spesso senza preavviso, dando luogo a smarrimento, paura e domande difficili come “Perché proprio a me?”. È un’esperienza che non riguarda mai una sola persona, ma coinvolge anche la famiglia e gli affetti più vicini, mettendo alla prova equilibri ed energie emotive. Chi affronta la malattia si ritrova immerso in un mondo fatto di cure, visite, attese e incertezze, mentre familiari e amici possono sperimentare sentimenti di impotenza, solitudine e difficoltà nel sostenere chi amano, spesso mettendo da parte il proprio dolore. In questo percorso complesso, fermarsi e dare spazio alle emozioni diventa fondamentale. Il sostegno professionale dello psico-oncologo offre uno spazio protetto di ascolto e condivisione, in cui poter comprendere ciò che si sta vivendo, attribuire significato all’esperienza e migliorare la qualità della vita, sia per il paziente sia per chi gli sta accanto."
     },
-        {
+    {
       "title": "Interventi di Comunicazione Aumentativa Alternativa (CAA)",
+      "image": "/globe.svg",
       "description": "Le competenze comunicative sono alla base del benessere di ogni individuo. Quando la comunicazione è inefficace, può causare sovraccarico cognitivo, frustrazione e difficoltà di apprendimento, soprattutto in ambito scolastico. La CAA (Comunicazione Aumentativa e Alternativa) comprende strumenti e strategie personalizzate che supportano o sostituiscono i canali comunicativi tradizionali. Trova applicazione in diverse condizioni, tra cui disturbi dello spettro autistico, ADHD, mutismo selettivo, ritardo nello sviluppo del linguaggio e DSA. L’obiettivo della CAA è migliorare la capacità comunicativa, rafforzare l’autoefficacia e aumentare autonomia e qualità della vita, anche attraverso migliori risultati scolastici. Ciò avviene rendendo i contenuti più accessibili e favorendo una partecipazione attiva, grazie a strumenti come pittogrammi, agende visive, mappe concettuali, colori, icone e testi semplificati con supporti visivi."
-  }]
+    }
+  ]
 }
