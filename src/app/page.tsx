@@ -21,7 +21,7 @@ export default function Home() {
       <ServiziSection />
       <PrenotaSection />
       <FaqSection />
-      <BlogSection />
+      {/* <BlogSection /> */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
