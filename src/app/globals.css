@@ -92,20 +92,8 @@ body {
     border: none !important;
 }
 
-.swiper-pagination {
-  margin-top: 10px;
-}
-
-.swiper-slide {
-  padding-bottom: 2.5rem;
-}
-
-.swiper-slide h3 {
-  font-size: 1.25rem;
-}
-
-.swiper-pagination-bullets {
-  bottom: 0px !important;
+.navbar-shadow {
+  box-shadow: 0 2px 25px rgba(0, 0, 0, 0.08);
 }
 
 .address-container {
@@ -177,4 +165,12 @@ body {
 /* Custom Modal Styling */
 .modal-body {
   padding: 1.5rem !important;
+}
+
+section[id] {
+  scroll-margin-top: 60px;
+}
+
+.bg-light {
+  background-color: #f0f2f5 !important;
 }
