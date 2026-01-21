@@ -14,12 +14,7 @@ const FaqSection = () => {
             <div className="accordion" id="faqAccordion">
               {faqData.questions.map((q, index) => (
                 <div className="accordion-item" key={q.question}>
-                  <div
-                    className="accordion-header"
-                    id={`heading${index}`}
-                    role="heading"
-                    aria-level={2}
-                  >
+                  <h2 className="accordion-header" id={`heading${index}`}>
                     <button
                       className={`accordion-button fs-5 ${
                         index === 0 ? "" : "collapsed"
@@ -32,7 +27,7 @@ const FaqSection = () => {
                     >
                       {q.question}
                     </button>
-                  </div>
+                  </h2>
                   <div
                     id={`collapse${index}`}
                     className={`accordion-collapse collapse ${

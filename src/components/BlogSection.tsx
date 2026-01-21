@@ -8,7 +8,7 @@ const BlogSection = () => {
       <div className="container">
         <h2 className="fs-2 text-uppercase fw-bold text-center mb-5">{blogData.title}</h2>
         <div className="row">
-          {blogData.posts.map((post, index) => (
+          {blogData.posts.map((post) => (
             <div className="col-md-4 mb-4" key={post.title}>
               <a href="#" className="card h-100">
                 <Image
