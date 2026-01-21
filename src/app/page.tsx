@@ -8,7 +8,7 @@ import BlogSection from "@/components/BlogSection";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: "Dott. Vito Ferraro",
   description:
     "Pagina principale dello studio psicologico del Dott. Vito Ferraro. Scopri i servizi offerti e prenota una consulenza.",
 };
