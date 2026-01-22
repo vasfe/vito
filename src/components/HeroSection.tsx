@@ -1,10 +1,13 @@
 import heroData from '@/properties/hero.json';
 import { getAssetPath } from '@/utils/asset';
+import prenotaData from '@/properties/prenota.json';
 
 const HeroSection = () => {
   const heroStyle = {
     backgroundImage: `url('${getAssetPath(heroData.image)}')`,
   };
+
+  const whatsAppNumber = prenotaData.phone.replace(/[\s+]/g, '');
 
   return (
     <section id="home" className="hero-section" style={heroStyle}>
@@ -34,7 +37,7 @@ const HeroSection = () => {
             <i className="bi bi-instagram"></i>
           </a>
           <a
-            href="https://wa.me/1234567890"
+            href={`https://wa.me/${whatsAppNumber}`}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="WhatsApp"
