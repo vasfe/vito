@@ -1,15 +1,15 @@
 body {
   --bs-body-color: #333;
-  --accent-color: #b8a07e;
+  --accent-color: #d8b01f;
 }
 
 .border-accent {
   border-color: var(--accent-color) !important;
 }
-
+/* 
 .su-di-me-image-wrapper.border-5 {
   border-width: 15px !important;
-}
+} */
 
 .hero-section {
   position: relative;
@@ -106,8 +106,8 @@ body {
 }
 
 #prenota .btn-primary {
-  background-color: #333 !important;
-  border-color: #333 !important;
+  background-color: #010939 !important;
+  border-color: #010939 !important;
   text-transform: uppercase;
   font-size: 0.8rem !important;
   border-radius: 0;
@@ -172,5 +172,5 @@ section[id] {
 }
 
 .bg-light {
-  background-color: #f0f2f5 !important;
+  background-color: #f4f9fffa !important;
 }
