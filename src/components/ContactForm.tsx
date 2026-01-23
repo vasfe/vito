@@ -1,55 +1,67 @@
 'use client';
 
-import { useState, FormEvent } from 'react';
+import { useState, useRef, FormEvent } from 'react';
+import useWeb3Forms from '@web3forms/react';
 
 const ContactForm = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const formRef = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState('');
+  const [result, setResult] = useState<{ message: string } | null>(null);
 
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-    setStatus('sending');
 
-    const res = await fetch('/api/send-email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ name, email, message }),
-    });
-
-    if (res.ok) {
+  const { submit } = useWeb3Forms({
+    access_key: '86abf7be-640e-4266-9c52-47798f7940d2',
+    settings: {
+      from_name: 'Vito Ferraro Website',
+      subject: 'New Contact Message from your Website',
+    },
+    onSuccess: (message, data) => {
       setStatus('success');
-      setName('');
-      setEmail('');
-      setMessage('');
-    } else {
+      setResult({
+        message: 'Email sent successfully!',
+      });
+      if (formRef.current) {
+        formRef.current.reset();
+      }
+    },
+    onError: (message, data) => {
       setStatus('error');
-    }
+      setResult({
+        message: 'Failed to send email. Please try again later.',
+      });
+    },
+  });
+
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setStatus('sending');
+    const formData = new FormData(event.target as HTMLFormElement);
+    const object = Object.fromEntries(formData);
+    submit(object);
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} ref={formRef}>
       {status === 'success' && (
         <div className="alert alert-success" role="alert">
-          Email sent successfully!
+          {result?.message}
         </div>
       )}
       {status === 'error' && (
         <div className="alert alert-danger" role="alert">
-          Failed to send email. Please try again later.
+          {result?.message}
         </div>
       )}
+      <div className="alert alert-warning mb-3" role="alert">
+        <strong>Attenzione:</strong> Si prega di non includere informazioni sanitarie sensibili o riservate in questo modulo. Questo modulo è destinato esclusivamente a richieste di informazioni generali.
+      </div>
       <div className="form-floating mb-3">
         <input
           type="text"
           className="form-control"
           id="name"
+          name="name"
           placeholder="Nome"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
           required
         />
         <label htmlFor="name">Nome *</label>
@@ -59,9 +71,8 @@ const ContactForm = () => {
           type="email"
           className="form-control"
           id="email"
+          name="email"
           placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
           required
         />
         <label htmlFor="email">Email *</label>
@@ -70,10 +81,9 @@ const ContactForm = () => {
         <textarea
           className="form-control"
           id="message"
+          name="message"
           placeholder="Messaggio"
           rows={5}
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
           required
         ></textarea>
         <label htmlFor="message">Messaggio *</label>
