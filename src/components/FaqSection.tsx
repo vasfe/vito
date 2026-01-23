@@ -36,7 +36,15 @@ const FaqSection = () => {
                     aria-labelledby={`heading${index}`}
                     data-bs-parent="#faqAccordion"
                   >
-                    <div className="accordion-body ps-4">{q.answer}</div>
+                    {q.answer && (
+                      <div className="accordion-body ps-4">{q.answer}</div>
+                    )}
+                    {q.answers?.map((a) => (
+                      <div className="accordion-body ps-4" key={a.header}>
+                        <strong>{a.header}</strong>{": "} 
+                        {a.paragraph}
+                      </div>
+                    ))}
                   </div>
                 </div>
               ))}

@@ -2,7 +2,7 @@
   "title": "FAQ",
   "questions": [
     {
-    "question": "Come faccio a prenotare un appuntamento?",
+      "question": "Come faccio a prenotare un appuntamento?",
       "answer": "Tutte le prestazioni possono essere prenotate telefonicamente o via WhatsApp al numero +39 3295813245, via mail scrivendo all’indirizzo ferrarovpsicologo@gmail.com o usando il servizio mail di questo sito in fondo alla pagina. Per qualsiasi chiarimento o per individuare la soluzione più adatta, è possibile contattarmi senza impegno: sarò felice di rispondere e valutare insieme il percorso più appropriato."
     },
     {
@@ -11,8 +11,25 @@
     },
     {
       "question": "Quali sono i vantaggi delle sedute online?",
-      "answer": "Economicità: le sedute online riducono molti dei costi operativi, permettendo di offrirti tariffe più vantaggiose senza compromettere la qualità del servizio. Flessibilità: le prestazioni online si adattano facilmente ai tuoi tempi e alle tue esigenze. È possibile costruire un percorso personalizzato, con appuntamenti anche nei weekend o in orari in cui gli studi fisici sono chiusi, rendendo più semplice conciliare benessere e vita quotidiana.Comfort: seguire una seduta dal tuo spazio ti aiuta a sentirti a tuo agio, creando un ambiente sicuro e familiare in cui aprirti liberamente. È come avere lo studio sempre a portata di mano, pronto ad accoglierti con professionalità e calore, ovunque tu sia.Professionalità e riservatezza: le prestazioni online rispettano gli stessi standard di qualità delle sedute in presenza, salvaguardando il segreto professionale e garantendo la protezione dei pagamenti, anche grazie all’uso di piattaforme dedicate."
-      },
+      "answers": [
+        {
+          "header": "Economicità",
+          "paragraph": "le sedute online riducono molti dei costi operativi, permettendo di offrirti tariffe più vantaggiose senza compromettere la qualità del servizio."
+        },
+        {
+          "header": "Flessibilità",
+          "paragraph": "le prestazioni online si adattano facilmente ai tuoi tempi e alle tue esigenze. È possibile costruire un percorso personalizzato, con appuntamenti anche nei weekend o in orari in cui gli studi fisici sono chiusi, rendendo più semplice conciliare benessere e vita quotidiana."
+        },
+        {
+          "header": "Comfort",
+          "paragraph": "seguire una seduta dal tuo spazio ti aiuta a sentirti a tuo agio, creando un ambiente sicuro e familiare in cui aprirti liberamente. È come avere lo studio sempre a portata di mano, pronto ad accoglierti con professionalità e calore, ovunque tu sia."
+        },
+        {
+          "header": "Professionalità e riservatezza",
+          "paragraph": "le prestazioni online rispettano gli stessi standard di qualità delle sedute in presenza, salvaguardando il segreto professionale e garantendo la protezione dei pagamenti, anche grazie all’uso di piattaforme dedicate."
+        }
+      ]
+    },
     {
       "question": "Domanda Frequente 4",
       "answer": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
