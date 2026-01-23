@@ -7,8 +7,6 @@ const HeroSection = () => {
     backgroundImage: `url('${getAssetPath(heroData.image)}')`,
   };
 
-  const whatsAppNumber = prenotaData.phone.replace(/[\s+]/g, '');
-
   return (
     <section id="home" className="hero-section" style={heroStyle}>
       <div className="container hero-content">
@@ -17,7 +15,7 @@ const HeroSection = () => {
         </h1>
         <h2 className="display-5">{heroData.subheader}</h2>
         <p className="lead">{heroData.paragraph}</p>
-        <div className="social-icons mt-4">
+        {/* <div className="social-icons mt-4">
           <a
             href="https://www.facebook.com"
             target="_blank"
@@ -36,16 +34,7 @@ const HeroSection = () => {
           >
             <i className="bi bi-instagram"></i>
           </a>
-          <a
-            href={`https://wa.me/${whatsAppNumber}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="WhatsApp"
-            className="mx-2"
-          >
-            <i className="bi bi-whatsapp"></i>
-          </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );
