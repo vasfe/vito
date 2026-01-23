@@ -28,8 +28,6 @@ const ServiziSection = () => {
           <h2 className="fs-2 text-uppercase fw-bold text-center mb-5">
             {serviziData.title}
           </h2>
-          <h3 className="fs-4 text-center mb-2">{serviziData.subheader}</h3>
-          <p>{serviziData.paragraph}</p>
           <Row className="mt-1 g-4 justify-content-center">
             {serviziData.slides.map((slide) => (
               <Col md={6} lg={4} key={slide.title}>
@@ -58,6 +56,16 @@ const ServiziSection = () => {
               </Col>
             ))}
           </Row>
+          <h3 className="fs-4 text-center mb-2 mt-5">{serviziData.subheader}</h3>
+          <p>{serviziData.paragraph}</p>{" "}
+          <div className="address-container">
+            <div className="address-label me-3">Ricevo a</div>
+            <ul>
+              {serviziData.addresses.map((address) => (
+                <li key={address}>{address}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 
