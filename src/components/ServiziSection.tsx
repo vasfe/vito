@@ -56,10 +56,10 @@ const ServiziSection = () => {
               </Col>
             ))}
           </Row>
-          <h3 className="fs-4 text-center mb-2 mt-5">{serviziData.subheader}</h3>
-          <p>{serviziData.paragraph}</p>{" "}
-          <div className="address-container">
-            <div className="address-label me-3">Ricevo a</div>
+          <h3 className="fs-4 text-center mt-5 mb-3">{serviziData.subheader}</h3>
+          <p>{serviziData.paragraph}</p>
+          <div className="address-container ">
+            <div className="address-label me-2">Ricevo a</div>
             <ul>
               {serviziData.addresses.map((address) => (
                 <li key={address}>{address}</li>
@@ -68,7 +68,6 @@ const ServiziSection = () => {
           </div>
         </div>
       </section>
-
       {selectedService && (
         <Modal show={showModal} onHide={handleCloseModal} centered>
           <Modal.Header closeButton>
