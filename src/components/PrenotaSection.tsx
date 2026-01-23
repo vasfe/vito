@@ -1,7 +1,9 @@
-'use client';
+"use client";
 
 import ContactForm from "@/components/ContactForm";
-import prenotaData from '@/properties/prenota.json';
+import prenotaData from "@/properties/prenota.json";
+
+const whatsAppNumber = prenotaData.phone.replace(/[\s+]/g, "");
 
 const PrenotaSection = () => {
   return (
@@ -11,10 +13,29 @@ const PrenotaSection = () => {
           {prenotaData.title}
         </h2>
         <div className="row">
-          <div className="col-lg-6">
-            <div className="mt-4">
-              <p>{prenotaData.phone}</p>
-              <p>{prenotaData.email}</p>
+          <div className="col col-lg-6 justify-content-center ">
+            <p>{prenotaData.paragraph}</p>
+            <div className="d-flex flex-column my-4 gap-2">
+              <a
+                href={`https://wa.me/${whatsAppNumber}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+                className="contact-link"
+              >
+                <i className="bi bi-whatsapp whatsapp-icon"></i>
+                <>{prenotaData.phone}</>
+              </a>
+              <a
+                href={`https://mailto:${prenotaData.email}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+                className="contact-link"
+              >
+                <i className="bi bi-envelope-at email-icon"></i>
+                <>{prenotaData.email}</>
+              </a>
             </div>
           </div>
           <div className="col-lg-6">
