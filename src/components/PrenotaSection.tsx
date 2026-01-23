@@ -12,14 +12,6 @@ const PrenotaSection = () => {
         </h2>
         <div className="row">
           <div className="col-lg-6">
-            <div className="address-container">
-              <div className="address-label me-3">Ricevo a</div>
-              <ul>
-                {prenotaData.addresses.map((address) => (
-                  <li key={address}>{address}</li>
-                ))}
-              </ul>
-            </div>
             <div className="mt-4">
               <p>{prenotaData.phone}</p>
               <p>{prenotaData.email}</p>
