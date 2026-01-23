@@ -5,7 +5,7 @@ body {
 }
 
 .border-accent {
-  border-color: var(--accent-color)!important;
+  border-color: var(--accent-color) !important;
 }
 
 .hero-section {
@@ -36,7 +36,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #040c3bb0;
+  background-color: #020724b0;
 }
 
 .hero-section h2 {
@@ -49,9 +49,22 @@ body {
   z-index: 1;
 }
 
-.whatsapp-icon{
+.whatsapp-icon {
   color: green
 }
+
+.email-icon {
+  color: blue
+}
+
+.contact-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  width: fit-content;
+  flex-wrap: nowrap;  gap: 5;
+}
+
 
 /* .social-icons a {
   font-size: 1.5rem;
@@ -88,9 +101,9 @@ body {
 .navbar-toggler:active,
 .navbar-toggler.collapsed,
 .navbar-toggler-icon {
-    outline: none !important;
-    box-shadow: none !important;
-    border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
 .navbar-shadow {
@@ -134,13 +147,16 @@ body {
   border-top: none;
   border-bottom: 1px solid var(--bs-accordion-border-color);
 }
+
 .accordion-item:first-of-type {
   border-top: none;
 }
+
 .accordion-header {
   background-color: white;
   border-bottom: none;
 }
+
 .accordion-button,
 .accordion-button:focus {
   box-shadow: none !important;
@@ -151,6 +167,7 @@ body {
   color: white;
   border-radius: 2px;
 }
+
 .accordion-button:not(.collapsed)::after {
   filter: invert(1) drop-shadow(0 0 1px rgba(255, 255, 255, 0.8));
 }
@@ -165,8 +182,4 @@ section[id] {
 
 .bg-light {
   background-color: #f4f9fffa !important;
-}
-
-.contact-icon{
-  width: 40px;
 }
