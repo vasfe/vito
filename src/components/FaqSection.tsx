@@ -16,7 +16,7 @@ const FaqSection = () => {
                 <div className="accordion-item" key={q.question}>
                   <h2 className="accordion-header" id={`heading${index}`}>
                     <button
-                      className={`accordion-button fs-5 ${
+                      className={`accordion-button rounded fs-5 ${
                         index === 0 ? "" : "collapsed"
                       }`}
                       type="button"
