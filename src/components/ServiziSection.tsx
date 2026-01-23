@@ -40,11 +40,11 @@ const ServiziSection = () => {
                     variant="top"
                     src={getAssetPath(slide.image)}
                     style={{
-                      height: "200px",
-                      objectFit: "contain",
-                      paddingTop: "1rem",
-                      paddingBottom: "1rem",
+                      maxHeight: "250px",
                       background: "#f8f9fa",
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover"
                     }}
                   />
                   <Card.Body className="text-center">
