@@ -1,15 +1,12 @@
 body {
-  --bs-body-color: #333;
   --accent-color: #d8b01f;
+  --font-color: #010939;
+  --button-blue: #07166c;
 }
 
 .border-accent {
-  border-color: var(--accent-color) !important;
+  border-color: var(--accent-color)!important;
 }
-/* 
-.su-di-me-image-wrapper.border-5 {
-  border-width: 15px !important;
-} */
 
 .hero-section {
   position: relative;
@@ -39,7 +36,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #040c3bb0;
 }
 
 .hero-section h2 {
@@ -52,7 +49,11 @@ body {
   z-index: 1;
 }
 
-.social-icons a {
+.whatsapp-icon{
+  color: green
+}
+
+/* .social-icons a {
   font-size: 1.5rem;
   color: white;
   transition: color 0.3s;
@@ -60,7 +61,7 @@ body {
 
 .social-icons a:hover {
   color: #adb5bd;
-}
+} */
 
 /* Styles for showing/hiding the navbar */
 .navbar {
@@ -75,7 +76,7 @@ body {
   margin-inline: .75rem;
   font-weight: 700;
   padding: 0.5rem;
-  color: rgb(126, 125, 125);
+  color: var(--font-color);
 }
 
 .nav-link.active {
@@ -106,8 +107,8 @@ body {
 }
 
 #prenota .btn-primary {
-  background-color: #010939 !important;
-  border-color: #010939 !important;
+  background-color: var(--button-blue) !important;
+  border-color: var(--button-blue) !important;
   text-transform: uppercase;
   font-size: 0.8rem !important;
   border-radius: 0;
@@ -125,17 +126,6 @@ body {
   text-align: center;
 }
 
-@media (max-width: 768px) {
-  .hero-section {
-    height: auto;
-    padding: 100px 0;
-  }
-  .hero-section h2 {
-    font-size: 1.5rem;
-  }
-}
-
-/* Custom Accordion Styling */
 .accordion-item {
   background-color: white;
   border-radius: 0 !important;
@@ -152,17 +142,19 @@ body {
   border-bottom: none;
 }
 .accordion-button,
-.accordion-button:focus,
-.accordion-button:not(.collapsed) {
-  background-color: white !important;
+.accordion-button:focus {
   box-shadow: none !important;
-  border: none;
-}
-.accordion-button:not(.collapsed) {
-  color: var(--accent-color);
 }
 
-/* Custom Modal Styling */
+.accordion-button:not(.collapsed) {
+  background-color: var(--button-blue);
+  color: white;
+  border-radius: 2px;
+}
+.accordion-button:not(.collapsed)::after {
+  filter: invert(1) drop-shadow(0 0 1px rgba(255, 255, 255, 0.8));
+}
+
 .modal-body {
   padding: 1.5rem !important;
 }
@@ -173,4 +165,8 @@ section[id] {
 
 .bg-light {
   background-color: #f4f9fffa !important;
+}
+
+.contact-icon{
+  width: 40px;
 }
