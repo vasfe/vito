@@ -8,13 +8,14 @@ const SuDiMeSection = () => {
       <div className="container">
         <div className="row align-items-center g-3">
           <div className="col-lg-6 image-column mb-4">
-            <div className="su-di-me-image-wrapper border border-5 border-accent shadow">
+            <div className="su-di-me-image-wrapper border border-3 border-accent shadow">
               <Image
                 src={getAssetPath(suDiMeData.image)}
                 alt="Fotografia del Dott. Vito Ferraro - Psicologo"
                 fill
                 style={{ objectFit: 'cover' }}
                 priority
+                className='shadow'
               />
             </div>
           </div>
