@@ -1,16 +1,15 @@
 
-import ServiziSection from "@/components/ServiziSection";
+import ServicesSection from "@/components/ServicesSection";
 import HeroSection from "@/components/HeroSection";
 import SuDiMeSection from "@/components/SuDiMeSection";
-import PrenotaSection from "@/components/PrenotaSection";
+import BookAppointment from "@/components/BookAppointment";
 import FaqSection from "@/components/FaqSection";
-import BlogSection from "@/components/BlogSection";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Dott. Vito Ferraro",
   description:
-    "Pagina principale dello studio psicologico del Dott. Vito Ferraro. Scopri i servizi offerti e prenota una consulenza.",
+    "Pagina principale dello studio psicologico del Dott. Vito Ferraro. Scopri le prestazioni offerte e prenota una consulenza.",
 };
 
 export default function Home() {
@@ -18,8 +17,8 @@ export default function Home() {
     <main>
       <HeroSection />
       <SuDiMeSection />
-      <ServiziSection />
-      <PrenotaSection />
+      <ServicesSection />
+      <BookAppointment />
       <FaqSection />
       {/* <BlogSection /> */}
       <script

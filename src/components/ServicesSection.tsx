@@ -5,7 +5,7 @@ import { Modal, Card, Col, Row } from "react-bootstrap";
 import serviziData from "@/properties/servizi.json";
 import { getAssetPath } from "@/utils/asset";
 
-const ServiziSection = () => {
+const ServicesSection = () => {
   const [showModal, setShowModal] = useState(false);
   const [selectedService, setSelectedService] = useState<{
     title: string;
@@ -23,7 +23,7 @@ const ServiziSection = () => {
 
   return (
     <>
-      <section id="servizi" className="py-5">
+      <section id="services" className="py-5">
         <div className="container">
           <h2 className="fs-2 text-uppercase fw-bold text-center mb-5">
             {serviziData.title}
@@ -44,7 +44,7 @@ const ServiziSection = () => {
                       background: "#f8f9fa",
                       width: "100%",
                       height: "100%",
-                      objectFit: "cover"
+                      objectFit: "cover",
                     }}
                   />
                   <Card.Body className="text-center">
@@ -82,4 +82,4 @@ const ServiziSection = () => {
   );
 };
 
-export default ServiziSection;
+export default ServicesSection;

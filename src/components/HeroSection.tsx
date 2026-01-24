@@ -1,6 +1,5 @@
 import heroData from '@/properties/hero.json';
 import { getAssetPath } from '@/utils/asset';
-import prenotaData from '@/properties/prenota.json';
 
 const HeroSection = () => {
   const heroStyle = {

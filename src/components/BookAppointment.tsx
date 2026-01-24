@@ -5,9 +5,9 @@ import prenotaData from "@/properties/prenota.json";
 
 const whatsAppNumber = prenotaData.phone.replace(/[\s+]/g, "");
 
-const PrenotaSection = () => {
+const BookAppointment = () => {
   return (
-    <section id="prenota" className="py-5 bg-light">
+    <section id="book-appointment" className="py-5 bg-light">
       <div className="container">
         <h2 className="fs-2 text-uppercase fw-bold text-center mb-5">
           {prenotaData.title}
@@ -45,4 +45,4 @@ const PrenotaSection = () => {
   );
 };
 
-export default PrenotaSection;
+export default BookAppointment;

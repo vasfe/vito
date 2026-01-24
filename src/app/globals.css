@@ -110,16 +110,7 @@ body {
   box-shadow: 0 2px 25px rgba(0, 0, 0, 0.08);
 }
 
-/* .address-container {
-  display: flex;
-  align-items: flex-start;
-} */
-
-/* .address-label {
-  font-weight: bold;
-} */
-
-#prenota .btn-primary {
+#book-appointment .btn-primary {
   background-color: var(--button-blue) !important;
   border-color: var(--button-blue) !important;
   text-transform: uppercase;
@@ -127,7 +118,7 @@ body {
   border-radius: 0;
 }
 
-.su-di-me-image-wrapper {
+.about-me-image-wrapper {
   position: relative;
   width: 100%;
   max-width: 350px;
