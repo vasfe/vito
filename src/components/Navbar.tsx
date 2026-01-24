@@ -101,7 +101,7 @@ const CustomNavbar = () => {
               active={activeLink === "services"}
               onClick={() => setExpanded(false)}
             >
-              Servizi
+              Prestazioni
             </Nav.Link>{" "}
             <Nav.Link
               href="#book-appointment"
