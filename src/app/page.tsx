@@ -1,7 +1,7 @@
 
 import ServicesSection from "@/components/ServicesSection";
 import HeroSection from "@/components/HeroSection";
-import SuDiMeSection from "@/components/SuDiMeSection";
+import AboutMeSection from "@/components/SuDiMeSection";
 import BookAppointment from "@/components/BookAppointment";
 import FaqSection from "@/components/FaqSection";
 import type { Metadata } from "next";
@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <main>
       <HeroSection />
-      <SuDiMeSection />
+      <AboutMeSection />
       <ServicesSection />
       <BookAppointment />
       <FaqSection />

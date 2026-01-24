@@ -2,7 +2,7 @@ import Image from 'next/image';
 import suDiMeData from '@/properties/su-di-me.json';
 import { getAssetPath } from '@/utils/asset';
 
-const SuDiMeSection = () => {
+const AboutMeSection = () => {
   return (
     <section id="about-me" className="py-5 bg-light">
       <div className="container">
@@ -32,4 +32,4 @@ const SuDiMeSection = () => {
   );
 };
 
-export default SuDiMeSection;
+export default AboutMeSection;
