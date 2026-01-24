@@ -1,7 +1,7 @@
 
 import ServicesSection from "@/components/ServicesSection";
 import HeroSection from "@/components/HeroSection";
-import AboutMeSection from "@/components/SuDiMeSection";
+import AboutMeSection from "@/components/AboutSection";
 import BookAppointment from "@/components/BookAppointment";
 import FaqSection from "@/components/FaqSection";
 import type { Metadata } from "next";
