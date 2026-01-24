@@ -1,16 +1,23 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Modal, Card, Col, Row } from "react-bootstrap";
 import serviziData from "@/properties/servizi.json";
 import { getAssetPath } from "@/utils/asset";
 
 const ServicesSection = () => {
+  const [isClientHydrated, setIsClientHydrated] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [selectedService, setSelectedService] = useState<{
     title: string;
     description: string;
   } | null>(null);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsClientHydrated(true);
+    }, 0);
+  }, []);
 
   const handleShowModal = (service: { title: string; description: string }) => {
     setSelectedService(service);
@@ -21,6 +28,38 @@ const ServicesSection = () => {
     setShowModal(false);
   };
 
+  // SEO-friendly version for server-side rendering and initial client render
+  if (!isClientHydrated) {
+    return (
+      <section id="services" className="py-5">
+        <div className="container">
+          <h2 className="fs-2 text-uppercase fw-bold text-center mb-5">
+            {serviziData.title}
+          </h2>
+          {serviziData.slides.map((service) => (
+            <div key={service.title} className="mb-4">
+              <h3 className="fs-5 fw-bold">{service.title}</h3>
+              <p>{service.description}</p>
+            </div>
+          ))}
+          <h3 className="fs-4 text-center mt-5 mb-3">
+            {serviziData.subheader}
+          </h3>
+          <p>{serviziData.paragraph}</p>
+          <div className="d-flex align-items-start">
+            <div className="fw-bold mr-2">Ricevo a</div>
+            <ul>
+              {serviziData.addresses.map((address) => (
+                <li key={address}>{address}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  // Interactive version for client-side rendering after hydration
   return (
     <>
       <section id="services" className="py-5">
@@ -39,6 +78,7 @@ const ServicesSection = () => {
                   <Card.Img
                     variant="top"
                     src={getAssetPath(slide.image)}
+                    alt={slide.title}
                     style={{
                       maxHeight: "250px",
                       background: "#f8f9fa",
