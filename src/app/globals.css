@@ -110,14 +110,14 @@ body {
   box-shadow: 0 2px 25px rgba(0, 0, 0, 0.08);
 }
 
-.address-container {
+/* .address-container {
   display: flex;
   align-items: flex-start;
-}
+} */
 
-.address-label {
+/* .address-label {
   font-weight: bold;
-}
+} */
 
 #prenota .btn-primary {
   background-color: var(--button-blue) !important;

@@ -40,9 +40,9 @@ const FaqSection = () => {
                       <div className="accordion-body ps-4">{q.answer}</div>
                     )}
                     {q.answers?.map((a) => (
-                      <div className="accordion-body ps-4" key={a.header}>
-                        <strong>{a.header}</strong>{": "} 
-                        {a.paragraph}
+                      <div className="accordion-body p-2 px-4" key={a.header}>
+                        <strong>{a.header}</strong>
+                        {": "} {a.paragraph}
                       </div>
                     ))}
                   </div>

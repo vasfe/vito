@@ -56,10 +56,12 @@ const ServiziSection = () => {
               </Col>
             ))}
           </Row>
-          <h3 className="fs-4 text-center mt-5 mb-3">{serviziData.subheader}</h3>
+          <h3 className="fs-4 text-center mt-5 mb-3">
+            {serviziData.subheader}
+          </h3>
           <p>{serviziData.paragraph}</p>
-          <div className="address-container ">
-            <div className="address-label me-2">Ricevo a</div>
+          <div className="d-flex align-items-start">
+            <div className="fw-bold mr-2">Ricevo a</div>
             <ul>
               {serviziData.addresses.map((address) => (
                 <li key={address}>{address}</li>
