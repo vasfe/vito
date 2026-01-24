@@ -18,7 +18,6 @@ const PrenotaSection = () => {
             <div className="d-flex flex-column my-4 gap-2">
               <a
                 href={`https://wa.me/${whatsAppNumber}`}
-                target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
                 className="contact-link"
@@ -27,8 +26,7 @@ const PrenotaSection = () => {
                 <>{prenotaData.phone}</>
               </a>
               <a
-                href={`https://mailto:${prenotaData.email}`}
-                target="_blank"
+                href={`mailto:${prenotaData.email}`}
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
                 className="contact-link"
