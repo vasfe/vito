@@ -1,7 +1,11 @@
 "use client";
 
-import ContactForm from "@/components/ContactForm";
+import dynamic from 'next/dynamic';
 import prenotaData from "@/properties/prenota.json";
+
+const DynamicContactForm = dynamic(() => import('@/components/ContactForm'), {
+  ssr: false,
+});
 
 const whatsAppNumber = prenotaData.phone.replace(/[\s+]/g, "");
 
@@ -28,7 +32,7 @@ const BookAppointment = () => {
               <a
                 href={`mailto:${prenotaData.email}`}
                 rel="noopener noreferrer"
-                aria-label="WhatsApp"
+                aria-label="Email"
                 className="contact-link"
               >
                 <i className="bi bi-envelope-at email-icon"></i>
@@ -37,7 +41,7 @@ const BookAppointment = () => {
             </div>
           </div>
           <div className="col-lg-6">
-            <ContactForm />
+            <DynamicContactForm />
           </div>
         </div>
       </div>
