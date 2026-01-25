@@ -54,7 +54,7 @@ body {
 }
 
 .email-icon {
-  color: blue
+  color: rgb(0, 0, 190)
 }
 
 .contact-link {
@@ -64,7 +64,6 @@ body {
   width: fit-content;
   flex-wrap: nowrap;  gap: 5;
 }
-
 
 /* .social-icons a {
   font-size: 1.5rem;
@@ -76,7 +75,6 @@ body {
   color: #adb5bd;
 } */
 
-/* Styles for showing/hiding the navbar */
 .navbar {
   position: fixed;
   top: 0;

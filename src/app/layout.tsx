@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
+import Navbar from "../components/Navbar";
+import BootstrapClient from "../components/BootstrapClient";
+import Footer from "../components/Footer";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
-import Navbar from "../components/Navbar"; // Import Navbar
-import BootstrapClient from "../components/BootstrapClient"; // Import BootstrapClient
-import Footer from "../components/Footer"; // Import Footer
 
 const lato = Lato({
-  weight: ["400", "700"], // Include 600 for semi-bold
+  weight: ["400", "700"],
   subsets: ["latin"],
   variable: "--font-lato",
 });
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
       "Studio psicologico del Dott. Vito Ferraro. Supporto psicologico e percorsi di crescita personale.",
     images: [
       {
-        url: "/hero.jpeg", // Path to social sharing image in `public` folder
+        url: "/vito.jpeg", // Path to social sharing image in `public` folder
         width: 1200,
         height: 630,
         alt: "Dott. Vito Ferraro - Studio Psicologico",
@@ -52,10 +53,10 @@ export default function RootLayout({
         />
       </head>
       <body className={`${lato.variable} ${lato.className} antialiased`}>
-        <Navbar /> {/* Add Navbar component */}
+        <Navbar />
         {children}
-        <BootstrapClient /> {/* Add BootstrapClient component */}
-        <Footer /> {/* Add Footer component */}
+        <BootstrapClient />
+        <Footer />
       </body>
     </html>
   );
