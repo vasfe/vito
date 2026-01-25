@@ -1,4 +1,4 @@
-body {
+:root {
   --accent-color: #d8b01f;
   --font-color: #010939;
   --button-blue: #07166c;
@@ -91,7 +91,19 @@ body {
 }
 
 .nav-link.active {
-  color: var(--accent-color) !important;
+  width: fit-content; /* Ensure underline only spans text content */
+  position: relative; /* Needed for pseudo-element positioning */
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: var(--accent-color, #d8b01f); 
+  border-radius: 5px;
 }
 
 .navbar-toggler,
