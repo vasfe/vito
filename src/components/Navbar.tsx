@@ -90,22 +90,22 @@ const CustomNavbar = () => {
               Home
             </Nav.Link>
             <Nav.Link
-              href="#su-di-me"
-              active={activeLink === "su-di-me"}
+              href="#about-me"
+              active={activeLink === "about-me"}
               onClick={() => setExpanded(false)}
             >
               Su Di Me
             </Nav.Link>
             <Nav.Link
-              href="#servizi"
-              active={activeLink === "servizi"}
+              href="#services"
+              active={activeLink === "services"}
               onClick={() => setExpanded(false)}
             >
-              Servizi
+              Prestazioni
             </Nav.Link>{" "}
             <Nav.Link
-              href="#prenota"
-              active={activeLink === "prenota"}
+              href="#book-appointment"
+              active={activeLink === "book-appointment"}
               onClick={() => setExpanded(false)}
             >
               Prenota

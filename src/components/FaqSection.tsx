@@ -1,8 +1,47 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import faqData from "@/properties/faq.json";
 
 const FaqSection = () => {
+  const [isClientHydrated, setIsClientHydrated] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsClientHydrated(true);
+    }, 0);
+  }, []);
+
+  if (!isClientHydrated) {
+    // SEO-friendly version for SSR and initial client render
+    return (
+      <section id="faq" className="py-5">
+        <div className="container">
+          <h2 className="fs-2 text-uppercase fw-bold text-center mb-5">
+            {faqData.title}
+          </h2>
+          <div className="row">
+            <div className="col-lg-12 mx-auto">
+              {faqData.questions.map((q) => (
+                <div className="mb-4" key={q.question}>
+                  <h3 className="fs-5 fw-bold">{q.question}</h3>
+                  {q.answer && <div className="ps-4">{q.answer}</div>}
+                  {q.answers?.map((a) => (
+                    <div className="ps-4" key={a.header}>
+                      <strong>{a.header}</strong>
+                      {": "} {a.paragraph}
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  // Interactive version for client-side rendering after hydration
   return (
     <section id="faq" className="py-5">
       <div className="container">
@@ -36,7 +75,15 @@ const FaqSection = () => {
                     aria-labelledby={`heading${index}`}
                     data-bs-parent="#faqAccordion"
                   >
-                    <div className="accordion-body ps-4">{q.answer}</div>
+                    {q.answer && (
+                      <div className="accordion-body ps-4">{q.answer}</div>
+                    )}
+                    {q.answers?.map((a) => (
+                      <div className="accordion-body p-2 px-4" key={a.header}>
+                        <strong>{a.header}</strong>
+                        {": "} {a.paragraph}
+                      </div>
+                    ))}
                   </div>
                 </div>
               ))}
