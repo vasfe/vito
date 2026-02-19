@@ -2,13 +2,12 @@
 
 import { useState, useRef, FormEvent } from "react";
 import useWeb3Forms from "@web3forms/react";
+import prenotaData from "@/properties/prenota.json";
 
 const ContactForm = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState("");
   const [result, setResult] = useState<{ message: string } | null>(null);
-  const [isChecked, setIsChecked] = useState(false);
-  const [showGdprError, setShowGdprError] = useState(false);
 
   const { submit } = useWeb3Forms({
     access_key: "86abf7be-640e-4266-9c52-47798f7940d2",
@@ -35,13 +34,6 @@ const ContactForm = () => {
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-
-    if (!isChecked) {
-      setShowGdprError(true);
-      return;
-    }
-
-    setShowGdprError(false);
     setStatus("sending");
     const formData = new FormData(event.target as HTMLFormElement);
     const object = Object.fromEntries(formData);
@@ -96,33 +88,16 @@ const ContactForm = () => {
       <div className="alert alert-warning mb-3" role="alert">
         <div className="form-check mb-3">
           <input
-            className={`form-check-input ${showGdprError ? "is-invalid" : ""}`}
+            className="form-check-input"
             type="checkbox"
             id="gdpr"
-            checked={isChecked}
-            onChange={(e) => {
-              setIsChecked(e.target.checked);
-              if (e.target.checked) {
-                setShowGdprError(false);
-              }
-            }}
             required
           />
           <label className="form-check-label" htmlFor="gdpr">
             Dichiaro di aver letto e accettato le condizioni sulla privacy.
           </label>
-          {showGdprError && (
-            <div className="invalid-feedback">
-              Per favore, accetta le condizioni sulla privacy per continuare.
-            </div>
-          )}
         </div>
-        <p className="small mb-3">
-          I dati personali forniti saranno trattati al solo fine di rispondere
-          alla tua richiesta e non saranno ceduti a terzi. Per maggiori
-          informazioni, consulta la nostra Privacy Policy. Cliccando su&apos; Invia
-          Messaggio&apos;, dichiari di aver letto e accettato le condizioni.
-        </p>
+        <p className="small mb-3">{prenotaData.gdpr}</p>
       </div>
       <button
         type="submit"
