@@ -20,7 +20,7 @@ const Footer = () => {
                 <i className="bi bi-whatsapp fs-4"></i>
               </a>
             </div> */}
-            <p className="mt-3 fs-6 text-muted">&copy; {new Date().getFullYear()} Vito Ferraro. All rights reserved.</p>
+            <small className="mt-3 mb-3 text-muted d-block">&copy; {new Date().getFullYear()} Vito Ferraro. All rights reserved.</small>
           </Col>
         </Row>
       </Container>
