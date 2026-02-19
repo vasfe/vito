@@ -117,7 +117,6 @@ const CustomNavbar = () => {
             >
               FAQ
             </Nav.Link>
-            {/* <Nav.Link href="#blog" active={activeLink === 'blog'} onClick={() => setExpanded(false)}>Blog</Nav.Link> */}
           </Nav>
         </Navbar.Collapse>
       </Container>
