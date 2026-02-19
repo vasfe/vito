@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Modal, Card, Col, Row } from "react-bootstrap";
-import serviziData from "@/properties/servizi.json";
+import prestazioniData from "@/properties/prestazioni.json";
 import { getAssetPath } from "@/utils/asset";
 
 const ServicesSection = () => {
@@ -34,22 +34,22 @@ const ServicesSection = () => {
       <section id="services" className="py-5">
         <div className="container">
           <h2 className="fs-2 text-uppercase fw-bold text-center mb-5">
-            {serviziData.title}
+            {prestazioniData.title}
           </h2>
-          {serviziData.slides.map((service) => (
+          {prestazioniData.slides.map((service) => (
             <div key={service.title} className="mb-4">
               <h3 className="fs-5 fw-bold">{service.title}</h3>
               <p>{service.description}</p>
             </div>
           ))}
           <h3 className="fs-4 text-center mt-5 mb-3">
-            {serviziData.subheader}
+            {prestazioniData.subheader}
           </h3>
-          <p>{serviziData.paragraph}</p>
+          <p>{prestazioniData.paragraph}</p>
           <div className="d-flex align-items-start">
             <div className="fw-bold mr-2">Ricevo a</div>
             <ul>
-              {serviziData.addresses.map((address) => (
+              {prestazioniData.addresses.map((address) => (
                 <li key={address}>{address}</li>
               ))}
             </ul>
@@ -65,10 +65,10 @@ const ServicesSection = () => {
       <section id="services" className="py-5">
         <div className="container">
           <h2 className="fs-2 text-uppercase fw-bold text-center mb-5">
-            {serviziData.title}
+            {prestazioniData.title}
           </h2>
           <Row className="mt-1 g-4 justify-content-center">
-            {serviziData.slides.map((slide) => (
+            {prestazioniData.slides.map((slide) => (
               <Col md={6} lg={4} key={slide.title}>
                 <Card
                   className="h-100 shadow-sm"
@@ -97,13 +97,13 @@ const ServicesSection = () => {
             ))}
           </Row>
           <h3 className="fs-4 text-center mt-5 mb-3">
-            {serviziData.subheader}
+            {prestazioniData.subheader}
           </h3>
-          <p>{serviziData.paragraph}</p>
+          <p>{prestazioniData.paragraph}</p>
           <div className="d-flex align-items-start">
             <div className="fw-bold mr-2">Ricevo a</div>
             <ul>
-              {serviziData.addresses.map((address) => (
+              {prestazioniData.addresses.map((address) => (
                 <li key={address}>{address}</li>
               ))}
             </ul>
