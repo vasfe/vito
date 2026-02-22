@@ -2,7 +2,7 @@
   "name": "vito",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://www.vitoferraro.com",
+  "homepage": "https://www.ferraropsicologo.it",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
