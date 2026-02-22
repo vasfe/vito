@@ -136,11 +136,6 @@ const ContactForm = () => {
             </p>
           ))}
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Chiudi
-          </Button>
-        </Modal.Footer>
       </Modal>
     </>
   );
