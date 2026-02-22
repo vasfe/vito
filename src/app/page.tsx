@@ -27,9 +27,9 @@ export default function Home() {
           "@context": "https://schema.org",
           "@type": "Psychologist",
           "name": "Dott. Vito Ferraro",
-          "image": "https://vitoferraro.com/hero.jpeg",
-          "@id": "https://vitoferraro.com",
-          "url": "https://vitoferraro.com",
+          "image": "https://www.ferraropsicologo.it/hero.jpeg",
+          "@id": "https://www.ferraropsicologo.it",
+          "url": "https://www.ferraropsicologo.it",
           "telephone": "+39 3295813245",
           "email": "ferrarovpsicologo@gmail.com",
           "address": {

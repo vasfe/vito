@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://www.vitoferraro.com',
+  siteUrl: process.env.SITE_URL || 'https://www.ferraropsicologo.it',
   generateRobotsTxt: false, // `robots.txt` is already manually created
   exclude: ['/server-sitemap.xml'], // if you have dynamic sitemap
   changefreq: 'daily',

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   description:
     "Studio psicologico del Dott. Vito Ferraro. Supporto psicologico e percorsi di crescita personale.",
-  metadataBase: new URL("https://vitoferraro.com"),
+  metadataBase: new URL("https://www.ferraropsicologo.it"),
   openGraph: {
     title: "Dott. Vito Ferraro - Psicologo",
     description:
