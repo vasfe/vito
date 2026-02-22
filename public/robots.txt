@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.vitoferraro.com/sitemap.xml
+Sitemap: https://www.ferraropsicologo.it/sitemap.xml
