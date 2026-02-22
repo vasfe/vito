@@ -3,5 +3,43 @@
   "paragraph": "Per prenotare un appuntamento è possibile contattarmi telefonicamente, via Email o Whatsapp ai contatti qui sotto oppure, per informazioni generali, si può utilizzare il servizio web-mail compilando l'apposito modulo a destra.",
   "phone": "+39 3295813245",
   "email": "ferrarovpsicologo@gmail.com",
-  "gdpr": "I dati personali forniti saranno trattati al solo fine di rispondere alla tua richiesta e non saranno ceduti a terzi. Per maggiori informazioni, consulta la nostra informativa sulla Privacy. Cliccando su 'Invia Messaggio', dichiari di aver letto e accettato le condizioni."
+  "gdpr": "I dati personali forniti saranno trattati al solo fine di rispondere alla tua richiesta e non saranno ceduti a terzi. Per maggiori informazioni, consulta la nostra informativa sulla Privacy. Cliccando su 'Invia Messaggio', dichiari di aver letto e accettato le condizioni.",
+  "informativa": [
+    {
+      "title": "1. Chi tratta i tuoi dati: ",
+      "paragrapth": "il titolare del trattamento dei dati personali è: Dott. Vito Ferraro, psicologo. Email: ferrarovpsicologo@gmail.com Tel: +39 3295813245.  Puoi contattarmi in qualsiasi momento per informazioni sul trattamento dei dati personali ai recapiti sopra indicati."
+    },
+    {
+      "title": "2. Quali dati vengono raccolti: ",
+      "paragrapth": "2attraverso questo sito possono essere raccolti: dati di contatto (nome, indirizzo email, numero di telefono); il contenuto dei messaggi inviati tramite il modulo di contatto o via email. Questo modulo è pensato solo per richieste di informazioni generali. Ti invito pertanto a non inserire dati relativi alla salute, informazioni cliniche o altri dati particolarmente delicati."
+    },
+    {
+      "title": "3. Perché vengono trattati i dati: ",
+      "paragrapth": "i dati forniti tramite il sito sono utilizzati esclusivamente per: rispondere alle richieste inviate; ricontattarti in relazione alla tua richiesta; gestire comunicazioni preliminari a un eventuale rapporto professionale. Il sito non è uno strumento per la presa in carico clinica né per lo svolgimento di attività psicologica o terapeutica."
+    },
+    {
+      "title": "4. Su quale base giuridica: ",
+      "paragrapth": "il trattamento dei dati si basa su: la tua richiesta di contatto (art. 6, par. 1, lett. b GDPR – misure precontrattuali); il legittimo interesse del titolare a rispondere alle richieste ricevute (art. 6, par. 1, lett. f GDPR). Eventuali dati relativi alla salute eventualmente inseriti in modo spontaneo saranno trattati solo nella misura strettamente necessaria a gestire la richiesta e nel rispetto della normativa vigente."
+    },
+    {
+      "title": "5. Come vengono trattati i dati: ",
+      "paragrapth": "i dati sono trattati con strumenti informatici e telematici, adottando misure di sicurezza adeguate a tutelarne la riservatezza e nel rispetto dei principi di correttezza, liceità e minimizzazione."
+    },
+    {
+      "title": "6. Per quanto tempo vengono conservati: ",
+      "paragrapth": "i dati raccolti tramite il sito sono conservati per il tempo necessario a gestire la richiesta e comunque per un periodo limitato e proporzionato alle finalità. Nel caso in cui si avvii un rapporto professionale, il trattamento dei dati sarà regolato da specifica informativa e consenso informato, forniti all’inizio della prestazione psicologica."
+    },
+    {
+      "title": "7. A chi possono essere comunicati: ",
+      "paragrapth": "i dati personali non saranno diffusi. Potranno essere trattati da fornitori di servizi tecnici (ad esempio hosting o posta elettronica) che operano, se necessario, come responsabili del trattamento ai sensi dell’art. 28 GDPR."
+    },
+    {
+      "title": "8. I tuoi diritti: ",
+      "paragrapth": "in qualunque momento puoi esercitare i diritti previsti dagli artt. 15–22 del GDPR, tra cui: accesso ai dati; rettifica o cancellazione; limitazione o opposizione al trattamento; reclamo all’Autorità Garante per la protezione dei dati personali. Puoi farlo scrivendo ai recapiti indicati sopra."
+    },
+    {
+      "title": "9. Perché vengono trattati i dati: ",
+      "paragrapth": "la presente informativa può essere aggiornata nel tempo. Ti invito a consultarla periodicamente."
+    }
+  ]
 }
