@@ -16,10 +16,10 @@ const lato = Lato({
 export const metadata: Metadata = {
   title: {
     template: "%s | Dott. Vito Ferraro",
-    default: "Dott. Vito Ferraro - Psicologo",
+    default: "Dott. Vito Ferraro - Psicologo a Roma, Monterotondo, Acri | Online e Domiciliare",
   },
   description:
-    "Studio psicologico del Dott. Vito Ferraro. Supporto psicologico e percorsi di crescita personale.",
+    "Studio psicologico del Dott. Vito Ferraro. Supporto psicologico a Roma, Monterotondo, Acri, Online e a Domicilio. Specialista in DSA, BES e Psico-oncologia.",
   metadataBase: new URL("https://www.ferraropsicologo.it"),
   openGraph: {
     title: "Dott. Vito Ferraro - Psicologo",

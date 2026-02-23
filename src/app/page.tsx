@@ -7,9 +7,9 @@ import FaqSection from "@/components/FaqSection";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Dott. Vito Ferraro",
+  title: "Psicologo Roma, Monterotondo, Acri | Online e Domiciliare",
   description:
-    "Pagina principale dello studio psicologico del Dott. Vito Ferraro. Scopri le prestazioni offerte e prenota una consulenza.",
+    "Studio psicologico del Dott. Vito Ferraro. Sostegno psicologico a Roma, Monterotondo e Acri, Online e a Domicilio. Specialista in DSA, BES, Psico-oncologia e CAA.",
 };
 
 export default function Home() {
